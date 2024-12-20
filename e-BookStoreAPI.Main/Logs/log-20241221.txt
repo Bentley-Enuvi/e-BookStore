@@ -1,0 +1,11 @@
+2024-12-21 00:20:57 [INF] Initializing the database...
+2024-12-21 00:21:00 [INF] Users table created or already exists.
+2024-12-21 00:21:00 [INF] Books table created or already exists.
+2024-12-21 00:21:01 [INF] CartItems table created or already exists.
+2024-12-21 00:21:01 [INF] PurchaseHistory table created or already exists.
+2024-12-21 00:21:02 [INF] Seed data inserted.
+2024-12-21 00:21:02 [INF] Database initialization completed.
+2024-12-21 00:23:01 [INF] User bentley added with ID 10.
+2024-12-21 00:23:01 [INF] User registered successfully with ID 10.
+2024-12-21 00:23:41 [INF] Retrieved user bentley.
+2024-12-21 00:23:42 [INF] User bentley logged in successfully.

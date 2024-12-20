@@ -1,0 +1,189 @@
+2024-12-20 20:50:43 [INF] Initializing the database...
+2024-12-20 20:54:59 [INF] Initializing the database...
+2024-12-20 20:55:18 [INF] Users table created or already exists.
+2024-12-20 20:55:23 [INF] Books table created or already exists.
+2024-12-20 20:55:29 [INF] CartItems table created or already exists.
+2024-12-20 20:55:34 [INF] PurchaseHistory table created or already exists.
+2024-12-20 21:00:38 [INF] Initializing the database...
+2024-12-20 21:00:47 [INF] Users table created or already exists.
+2024-12-20 21:00:49 [INF] Books table created or already exists.
+2024-12-20 21:00:50 [INF] CartItems table created or already exists.
+2024-12-20 21:00:52 [INF] PurchaseHistory table created or already exists.
+2024-12-20 21:01:14 [INF] Seed data inserted.
+2024-12-20 21:01:18 [INF] Database initialization completed.
+2024-12-20 21:05:34 [INF] User john added with ID 3.
+2024-12-20 21:05:38 [INF] User registered successfully with ID 3.
+2024-12-20 21:06:20 [INF] Retrieved user john.
+2024-12-20 21:06:21 [INF] User john logged in successfully.
+2024-12-20 21:08:12 [ERR] An unhandled exception occurred during the request.
+System.Data.DataException: Error parsing column 0 (id=f8f8b789-be59-4b6c-9a5e-c725e626a6c1 - Object)
+ ---> System.InvalidCastException: Object must implement IConvertible.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Deserializeb8685ddd-a25d-4ae7-a497-3d541d9f3552(DbDataReader)
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in /_/Dapper/SqlMapper.cs:line 3928
+   at Deserializeb8685ddd-a25d-4ae7-a497-3d541d9f3552(DbDataReader)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command)
+   at BookRepository.SearchBooksAsync(String query, Int32 pageNumber, Int32 pageSize, CancellationToken cancellationToken)
+   at eBookStoreAPI.Application.ApiUtilities.Services.BookService.SearchBooksAsync(String query, Int32 pageNumber, Int32 pageSize, CancellationToken cancellationToken)
+   at eBookStoreAPI.Application.Book.Query.eBookStoreAPI.SearchBook.SearchBookQueryHandler.Handle(SearchBookQuery request, CancellationToken cancellationToken)
+   at eBookStoreAPI.Presentation.Controllers.BookController.SearchBooks(String query, Int32 pageNumber, Int32 pageSize)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at eBookStoreAPI.Application.ApiUtilities.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext)
+2024-12-20 21:08:13 [ERR] Internal server error occurred.
+System.Data.DataException: Error parsing column 0 (id=f8f8b789-be59-4b6c-9a5e-c725e626a6c1 - Object)
+ ---> System.InvalidCastException: Object must implement IConvertible.
+   at System.Convert.ChangeType(Object value, Type conversionType, IFormatProvider provider)
+   at Deserializeb8685ddd-a25d-4ae7-a497-3d541d9f3552(DbDataReader)
+   --- End of inner exception stack trace ---
+   at Dapper.SqlMapper.ThrowDataException(Exception ex, Int32 index, IDataReader reader, Object value) in /_/Dapper/SqlMapper.cs:line 3928
+   at Deserializeb8685ddd-a25d-4ae7-a497-3d541d9f3552(DbDataReader)
+   at Dapper.SqlMapper.QueryAsync[T](IDbConnection cnn, Type effectiveType, CommandDefinition command)
+   at BookRepository.SearchBooksAsync(String query, Int32 pageNumber, Int32 pageSize, CancellationToken cancellationToken)
+   at eBookStoreAPI.Application.ApiUtilities.Services.BookService.SearchBooksAsync(String query, Int32 pageNumber, Int32 pageSize, CancellationToken cancellationToken)
+   at eBookStoreAPI.Application.Book.Query.eBookStoreAPI.SearchBook.SearchBookQueryHandler.Handle(SearchBookQuery request, CancellationToken cancellationToken)
+   at eBookStoreAPI.Presentation.Controllers.BookController.SearchBooks(String query, Int32 pageNumber, Int32 pageSize)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at eBookStoreAPI.Application.ApiUtilities.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext)
+2024-12-20 21:19:01 [INF] Initializing the database...
+2024-12-20 21:19:04 [INF] Users table created or already exists.
+2024-12-20 21:19:06 [INF] Books table created or already exists.
+2024-12-20 21:19:07 [INF] CartItems table created or already exists.
+2024-12-20 21:19:08 [INF] PurchaseHistory table created or already exists.
+2024-12-20 21:19:10 [INF] Seed data inserted.
+2024-12-20 21:19:11 [INF] Database initialization completed.
+2024-12-20 21:22:44 [INF] Book with ID 36902845-71b4-4944-94b6-cd62e6bd4065 added successfully.
+2024-12-20 22:45:23 [INF] Initializing the database...
+2024-12-20 22:45:26 [INF] Users table created or already exists.
+2024-12-20 22:45:27 [INF] Books table created or already exists.
+2024-12-20 22:45:27 [INF] CartItems table created or already exists.
+2024-12-20 22:45:27 [INF] PurchaseHistory table created or already exists.
+2024-12-20 22:45:28 [INF] Seed data inserted.
+2024-12-20 22:45:28 [INF] Database initialization completed.
+2024-12-20 22:46:02 [INF] Retrieved user John.
+2024-12-20 22:46:02 [WRN] Invalid login attempt for username John.
+2024-12-20 22:46:16 [INF] Retrieved user John.
+2024-12-20 22:46:16 [WRN] Invalid login attempt for username John.
+2024-12-20 22:47:11 [INF] Retrieved user john.
+2024-12-20 22:47:11 [WRN] Invalid login attempt for username john.
+2024-12-20 22:47:51 [INF] User james added with ID 6.
+2024-12-20 22:47:51 [INF] User registered successfully with ID 6.
+2024-12-20 22:48:10 [INF] Retrieved user james.
+2024-12-20 22:48:10 [INF] User james logged in successfully.
+2024-12-20 22:51:26 [ERR] An unhandled exception occurred during the request.
+Npgsql.PostgresException (0x80004005): 42804: column "bookid" is of type uuid but expression is of type text
+
+POSITION: 90
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1241
+   at eBookStoreAPI.Infrastructure.DataAccess.Repositories.CartRepository.AddToCartAsync(CartItem cartItem) in C:\Users\coven\OneDrive\Desktop\e-BookStore\e-BookStoreAPI.Infrastructure\DataAccess\Repositories\CartRepository.cs:line 27
+   at eBookStoreAPI.Application.ApiUtilities.Services.CartService.AddToCartAsync(Int32 UserId, String BookId, Int32 quantity) in C:\Users\coven\OneDrive\Desktop\e-BookStore\e-BookStoreAPI.Application\ApiUtilities\Services\CartService.cs:line 28
+   at eBookStoreAPI.Application.Products.Command.AddBook.AddToCartCommandHandler.Handle(AddToCartCommand request, CancellationToken cancellationToken) in C:\Users\coven\OneDrive\Desktop\e-BookStore\e-BookStoreAPI.Application\Cart\Command\AddToCart\AddToCartCommandHandler.cs:line 18
+   at eCartStoreAPI.Presentation.Controllers.CartController.AddToCart(AddToCartCommand command) in C:\Users\coven\OneDrive\Desktop\e-BookStore\e-BookStoreAPI.Main\Controllers\CartController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at eBookStoreAPI.Application.ApiUtilities.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\coven\OneDrive\Desktop\e-BookStore\e-BookStoreAPI.Application\ApiUtilities\Middleware\ExceptionMiddleware.cs:line 25
+  Exception data:
+    Severity: ERROR
+    SqlState: 42804
+    MessageText: column "bookid" is of type uuid but expression is of type text
+    Hint: You will need to rewrite or cast the expression.
+    Position: 90
+    File: parse_target.c
+    Line: 586
+    Routine: transformAssignedExpr
+2024-12-20 22:51:26 [ERR] Internal server error occurred.
+Npgsql.PostgresException (0x80004005): 42804: column "bookid" is of type uuid but expression is of type text
+
+POSITION: 90
+   at Npgsql.Internal.NpgsqlConnector.ReadMessageLong(Boolean async, DataRowLoadingMode dataRowLoadingMode, Boolean readingNotifications, Boolean isReadingPrependedMessage)
+   at System.Runtime.CompilerServices.PoolingAsyncValueTaskMethodBuilder`1.StateMachineBox`1.System.Threading.Tasks.Sources.IValueTaskSource<TResult>.GetResult(Int16 token)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlDataReader.NextResult(Boolean async, Boolean isConsuming, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteReader(Boolean async, CommandBehavior behavior, CancellationToken cancellationToken)
+   at Npgsql.NpgsqlCommand.ExecuteScalar(Boolean async, CancellationToken cancellationToken)
+   at Dapper.SqlMapper.ExecuteScalarImplAsync[T](IDbConnection cnn, CommandDefinition command) in /_/Dapper/SqlMapper.Async.cs:line 1241
+   at eBookStoreAPI.Infrastructure.DataAccess.Repositories.CartRepository.AddToCartAsync(CartItem cartItem) in C:\Users\coven\OneDrive\Desktop\e-BookStore\e-BookStoreAPI.Infrastructure\DataAccess\Repositories\CartRepository.cs:line 27
+   at eBookStoreAPI.Application.ApiUtilities.Services.CartService.AddToCartAsync(Int32 UserId, String BookId, Int32 quantity) in C:\Users\coven\OneDrive\Desktop\e-BookStore\e-BookStoreAPI.Application\ApiUtilities\Services\CartService.cs:line 28
+   at eBookStoreAPI.Application.Products.Command.AddBook.AddToCartCommandHandler.Handle(AddToCartCommand request, CancellationToken cancellationToken) in C:\Users\coven\OneDrive\Desktop\e-BookStore\e-BookStoreAPI.Application\Cart\Command\AddToCart\AddToCartCommandHandler.cs:line 18
+   at eCartStoreAPI.Presentation.Controllers.CartController.AddToCart(AddToCartCommand command) in C:\Users\coven\OneDrive\Desktop\e-BookStore\e-BookStoreAPI.Main\Controllers\CartController.cs:line 48
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ActionMethodExecutor.TaskOfIActionResultExecutor.Execute(ActionContext actionContext, IActionResultTypeMapper mapper, ObjectMethodExecutor executor, Object controller, Object[] arguments)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeActionMethodAsync>g__Awaited|12_0(ControllerActionInvoker invoker, ValueTask`1 actionResultValueTask)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeNextActionFilterAsync>g__Awaited|10_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Rethrow(ActionExecutedContextSealed context)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.Next(State& next, Scope& scope, Object& state, Boolean& isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ControllerActionInvoker.<InvokeInnerFilterAsync>g__Awaited|13_0(ControllerActionInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeFilterPipelineAsync>g__Awaited|20_0(ResourceInvoker invoker, Task lastTask, State next, Scope scope, Object state, Boolean isCompleted)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Mvc.Infrastructure.ResourceInvoker.<InvokeAsync>g__Awaited|17_0(ResourceInvoker invoker, Task task, IDisposable scope)
+   at Microsoft.AspNetCore.Authorization.AuthorizationMiddleware.Invoke(HttpContext context)
+   at Microsoft.AspNetCore.Authentication.AuthenticationMiddleware.Invoke(HttpContext context)
+   at eBookStoreAPI.Application.ApiUtilities.Middleware.ExceptionMiddleware.InvokeAsync(HttpContext httpContext) in C:\Users\coven\OneDrive\Desktop\e-BookStore\e-BookStoreAPI.Application\ApiUtilities\Middleware\ExceptionMiddleware.cs:line 25
+  Exception data:
+    Severity: ERROR
+    SqlState: 42804
+    MessageText: column "bookid" is of type uuid but expression is of type text
+    Hint: You will need to rewrite or cast the expression.
+    Position: 90
+    File: parse_target.c
+    Line: 586
+    Routine: transformAssignedExpr
+2024-12-20 22:57:29 [INF] Initializing the database...
+2024-12-20 22:57:32 [INF] Users table created or already exists.
+2024-12-20 22:57:33 [INF] Books table created or already exists.
+2024-12-20 22:57:33 [INF] CartItems table created or already exists.
+2024-12-20 22:57:33 [INF] PurchaseHistory table created or already exists.
+2024-12-20 22:57:34 [INF] Seed data inserted.
+2024-12-20 22:57:34 [INF] Database initialization completed.
+2024-12-20 22:59:28 [INF] Cart with ID 1 added successfully.
+2024-12-20 23:00:11 [INF] Cart with ID 2 added successfully.
+2024-12-20 23:01:14 [INF] Cart item with ID 1 removed successfully.
+2024-12-20 23:03:13 [INF] Cart item with ID 1 removed successfully.
+2024-12-20 23:03:29 [INF] Cart with ID 3 added successfully.
+2024-12-20 23:51:15 [INF] Initializing the database...
+2024-12-20 23:51:17 [INF] Users table created or already exists.
+2024-12-20 23:51:17 [INF] Books table created or already exists.
+2024-12-20 23:51:18 [INF] CartItems table created or already exists.
+2024-12-20 23:51:18 [INF] PurchaseHistory table created or already exists.
+2024-12-20 23:51:19 [INF] Seed data inserted.
+2024-12-20 23:51:19 [INF] Database initialization completed.
+2024-12-20 23:52:26 [INF] Retrieved user james.
+2024-12-20 23:52:27 [INF] User james logged in successfully.
+2024-12-20 23:54:40 [INF] User 6 purchased Book 36902845-71b4-4944-94b6-cd62e6bd4065 via Web payment.
+2024-12-20 23:54:47 [INF] Checkout successful for User 6, Book 36902845-71b4-4944-94b6-cd62e6bd4065
